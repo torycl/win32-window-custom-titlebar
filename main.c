@@ -34,7 +34,7 @@ int WinMain(
     window_class.cbSize = sizeof(window_class);
     window_class.lpszClassName = window_class_name;
     // Set the procedure that will receive window messages (events)
-    window_class.lpfnWndProc = win32_custom_title_bar_example_window_callback;
+    window_class.lpfnWndProc = (WNDPROC)win32_custom_title_bar_example_window_callback;
     // Ask to send WM_PAINT when resizing horizontally and vertically
     window_class.style = CS_HREDRAW | CS_VREDRAW;
   }
